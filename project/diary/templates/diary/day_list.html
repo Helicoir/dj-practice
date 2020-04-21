@@ -1,5 +1,14 @@
 {% extends 'diary/base.html' %}
 
 {% block content %}
-<h1>日記帳アプリケーション</h1>
+<h1>日記一覧</h1>
+
+{% for day in day_list %}
+<div style="display: flex; align-items: center;">
+  <h2 style="margin-right: 30px;">{{ day.title }}</h2>
+  <p>{{ day.date }}</p>
+</div>
+
+{% endfor %}
+
 {% endblock %}
